@@ -1,0 +1,23 @@
+{
+  "name": "slozhno-sosredotochitsya-fd",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizibrizi/slozhno-sosredotochitsya-fd.git"
+  },
+  "author": "kiseleva elizaveta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizibrizi/slozhno-sosredotochitsya-fd/issues"
+  },
+  "homepage": "https://github.com/lizibrizi/slozhno-sosredotochitsya-fd#readme",
+  "description": "",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
