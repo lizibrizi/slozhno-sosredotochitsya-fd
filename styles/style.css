@@ -7,6 +7,7 @@
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--background-clr);
 }
 
 @media (min-width: 768px) {
@@ -17,7 +18,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: auto max-content auto;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   block-size: 100vh;
 }
@@ -50,7 +51,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin: 25px 0 0;
 }
 
 .header__theme-menu-list {
@@ -59,18 +59,12 @@
   gap: 10px;
 }
 
-@media (min-width: 768px) {
-  .header__theme-menu {
-    margin: 10px 0 0;
-  }
-}
-
 @media (min-width: 1024px) {
   .header__theme-menu {
     justify-self: center;
     align-self: self-start;
-    margin: 0;
   }
+
   .header__theme-menu-list {
     flex-direction: row;
   }
@@ -125,19 +119,19 @@
 }
 
 .header__heading {
-  align-self: self-start;
-  margin: 15px 0 0;
+  align-self: center;
+  justify-self: start;
 }
 
 @media (min-width: 768px) {
   .header__heading {
-    margin: 20px 0 0 -20px;
+    margin: 0 0 0 -20px;
   }
 }
 
 @media (min-width: 1024px) {
   .header__heading {
-    margin: 45px 0 0 -20px;
+    margin: 0 0 0 -20px;
   }
 }
 
@@ -149,7 +143,6 @@
   text-decoration: none;
   text-shadow: 4px 4px 0 var(--accent-clr);
 }
-
 
 @media (min-width: 1024px) {
   .accented-shadow-text {
@@ -343,5 +336,5 @@
   justify-self: center;
   align-self: center;
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--heading-clr);
+  text-shadow: 2px 2px 0 var(--accent-clr);
 }

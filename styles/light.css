@@ -9,12 +9,15 @@
     --menu-clr: #353430;
     --rec-decoration-clr: transparent;
     --heading-clr: #353430;
+    --background-clr:  #FFF1F7;
+
   }
   
   @media (prefers-color-scheme: light) {
   
     :root {
       --cover-image: url(../images/cover-image-light.png);
+      --background-clr:  #FFF1F7;
       --accent-clr: #ff8dcb;
       --accent-clr-with-background: #353430;
       --accent-heading-clr: #ffc2e6;
