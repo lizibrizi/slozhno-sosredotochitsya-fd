@@ -19,23 +19,12 @@
   display: grid;
   grid-template-rows: auto max-content auto;
   align-items: center;
+  block-size: 100vh;
 }
 
 .decorated-zone {
   position: relative;
-  min-block-size: 97vh;
-}
-
-@media (min-width: 768px) {
-  .decorated-zone {
-    min-block-size: 96vh;
-  }
-}
-
-@media (min-width: 1024px) {
-  .decorated-zone {
-    min-block-size: 94.7vh;
-  }
+  min-block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -158,8 +147,9 @@
   font-size: var(--accent-heading-fs-mobile);
   line-height: 83%;
   text-decoration: none;
-  text-shadow: 4px 4px 0 var(--heading-clr);
+  text-shadow: 4px 4px 0 var(--accent-clr);
 }
+
 
 @media (min-width: 1024px) {
   .accented-shadow-text {
@@ -346,6 +336,7 @@
 
 .footer {
   display: grid;
+  block-size: 100vh;
 }
 
 .footer__text {
