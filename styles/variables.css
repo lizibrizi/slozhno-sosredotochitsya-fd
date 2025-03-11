@@ -10,7 +10,7 @@
     --menu-clr: #ff0070;
     --headers-clr: #ff0070;
     --rec-decoration-clr: #ff0070;
-    --gap: 40px;
+    --gap: 20px;
     --main-font: 'IBM Plex mono';
     --accent-heading-fs-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --accent-heading-fs-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
