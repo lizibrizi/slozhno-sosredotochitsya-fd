@@ -1,5 +1,5 @@
 .page {
-  padding: 10px;
+  padding: 0 10px;
   color: var(--text-clr);
   font-size: 18px;
   background-image: var(--cover-image);
@@ -9,6 +9,9 @@
   background-attachment: fixed;
   background-color: var(--background-clr);
   line-height: 23.4px;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0 auto;
 }
 
 .header {
@@ -22,7 +25,7 @@
 
 @media (min-width: 768px) {
   .page {
-    padding: 0 20px 20px 20px;
+    padding: 0 20px;
   }
 }
 
@@ -39,7 +42,13 @@
   block-size: 25px;
   inset-inline-end: 0;
   inset-block-start: 0;
-  margin-top: 20px;
+  top: 10px;
+}
+
+@media (min-width: 768px)  {
+  .decorated-zone::before {
+    top: 20px;
+  }
 }
 
 .decorated-zone::after {
@@ -53,9 +62,14 @@
   bottom: 20px;
 }
 
+@media (min-width: 768px)  {
+  .header__theme-menu {
+    margin-top: 20px;
+  }
+}
+
 .header__theme-menu {
   justify-self: end;
-  margin-top: 20px;
 }
 
 .header__theme-menu-list {
