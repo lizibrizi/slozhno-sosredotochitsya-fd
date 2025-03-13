@@ -292,6 +292,10 @@
   margin: 10px 0 0;
 }
 
+.gallery__list-item {
+  display: contents;
+}
+
 .gallery__img {
   inline-size: 100%;
 }
