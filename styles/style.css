@@ -167,7 +167,7 @@
 }
 
 .list_item_title {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   color: var(--heading-clr);
   font-size: 18px;
   line-height: 23.4px;
@@ -212,8 +212,14 @@
   margin-top: 40px;
 }
 
-.section.horizontal .section_list-item:not(:last-child) .section_text{
+.section.horizontal .section_list-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .section_list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .section_title {
@@ -259,10 +265,6 @@
   
 }
 
-.section_how-title {
-  font-weight: 400;
-  margin: 0 0 20px;
-}
 
 .gallery {
   margin: 50px 0 40px;
