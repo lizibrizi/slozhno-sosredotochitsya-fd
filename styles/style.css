@@ -204,13 +204,16 @@
   outline: 1px solid var(--text-clr);
 }
 
-.section_text {
-  margin: 10px 0 20px;
+.section {
+  margin: 50px 0 0;
 }
 
-.section.horizontal {
-  display: flex;
-  gap: 20px;
+.section:first-child {
+  margin-top: 40px;
+}
+
+.section.horizontal .section_list-item:not(:last-child) .section_text{
+  margin-bottom: 20px;
 }
 
 .section_title {
@@ -225,10 +228,18 @@
 }
 
 @media (min-width: 768px) {
-  .section_what {
-    margin: 80px 0 0;
+  .section.horizontal {
+    display: flex;
+    gap: 20px;
   }
 }
+
+@media (max-width: 767px) {
+  .section_title {
+    margin-bottom: 20px;
+  }
+}
+
 
 @media (min-width: 1024px) {
   .section {
@@ -246,22 +257,6 @@
     column-gap: var(--gap);
   }
   
-}
-
-@media (min-width: 768px) {
-  .section_how {
-    display: grid;
-    grid-template-columns: 236px 1fr;
-    column-gap: var(--gap);
-    margin: 80px 0 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section_how {
-    grid-template-columns: 315px 1fr;
-    margin: 80px 0 0;
-  }
 }
 
 .section_how-title {
