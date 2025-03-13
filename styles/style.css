@@ -10,22 +10,23 @@
   background-color: var(--background-clr);
 }
 
-@media (min-width: 768px) {
-  .page {
-    padding: 20px;
-  }
-}
-
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   block-size: 100vh;
+  min-block-size: 668px;
+  margin-block-end: 40px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .decorated-zone {
   position: relative;
-  min-block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -37,6 +38,7 @@
   block-size: 25px;
   inset-inline-end: 0;
   inset-block-start: 0;
+  margin-top: 20px;
 }
 
 .decorated-zone::after {
@@ -51,6 +53,7 @@
 
 .header__theme-menu {
   justify-self: end;
+  margin-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -79,6 +82,7 @@
   margin: 2px 9px;
   inset-inline-end: 0;
   inset-block-start: 0;
+  margin-top: 20px;
 }
 
 .decorative-rec-icon::after {
@@ -98,6 +102,7 @@
   color: var(--menu-clr);
   text-transform: lowercase;
   background-color: transparent;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -110,7 +115,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-clr);
+  border-bottom: 1px solid var(--decorative-bracket-clr);
 }
 
 .header__theme-menu-button_active {
@@ -124,12 +129,6 @@
 }
 
 @media (min-width: 768px) {
-  .header__heading {
-    margin: 0 0 0 -20px;
-  }
-}
-
-@media (min-width: 1024px) {
   .header__heading {
     margin: 0 0 0 -20px;
   }
@@ -167,6 +166,17 @@
   }
 }
 
+.list_item_title {
+  margin: 0 0 20px;
+  color: var(--heading-clr);
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.list_item_title.subtitle {
+  font-weight: 400;
+}
+
 .accented-background {
   color: var(--accent-clr-with-background);
   background-color: var(--accent-clr);
@@ -181,78 +191,61 @@
   font-weight: 700;
 }
 
-.h2-heading {
-  margin: 0 0 20px;
-  color: var(--heading-clr);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
-}
-
 .accented-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
 }
 
-.paragraph-text {
+.accented-link:hover {
+  text-decoration: underline;
+}
+
+.accented-link:focus {
+  outline: 1px solid var(--text-clr);
+}
+
+.section_text {
   margin: 10px 0 20px;
 }
 
-.why {
-  margin: 40px 0 0;
+.section.horizontal {
+  display: flex;
+  gap: 20px;
+}
+
+.section_title {
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .section_title {
+    min-width: 315px;
+    width: 315px;
+  }
 }
 
 @media (min-width: 768px) {
-  .why {
-    display: grid;
-    grid-template-columns: 236px 1fr;
-    column-gap: var(--gap);
-    margin: 60px 0 0;
+  .section_what {
+    margin: 80px 0 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .why {
-    grid-template-columns: 314.96px 1fr;
-  }
-}
-
-.what {
-  margin: 50px 0 0;
-}
-
-@media (min-width: 768px) {
-  .what {
+  .section {
     margin: 80px 0 0;
   }
 
-  .what__heading {
-    max-inline-size: 236px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .what {
-    margin: 80px 0 0;
-  }
-
-  .what__heading {
-    max-inline-size: 315px;
-  }
-
-  .what__list {
+  .section:not(.horizontal) .section_list {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--gap);
   }
-}
-
-.how {
-  margin: 50px 0 0;
+  
 }
 
 @media (min-width: 768px) {
-  .how {
+  .section_how {
     display: grid;
     grid-template-columns: 236px 1fr;
     column-gap: var(--gap);
@@ -261,18 +254,15 @@
 }
 
 @media (min-width: 1024px) {
-  .how {
+  .section_how {
     grid-template-columns: 315px 1fr;
     margin: 80px 0 0;
   }
 }
 
-.how__list-heading {
-  margin: 0 0 20px;
-}
-
-.how__list-title {
+.section_how-title {
   font-weight: 400;
+  margin: 0 0 20px;
 }
 
 .gallery {
@@ -282,7 +272,7 @@
 .gallery__list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   margin: 10px 0 0;
 }
 
@@ -330,6 +320,7 @@
 .footer {
   display: grid;
   block-size: 100vh;
+  margin-block-start: 40px;
 }
 
 .footer__text {
@@ -337,4 +328,10 @@
   align-self: center;
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
+}
+
+@media (min-width: 1024px) {
+  .footer__text {
+    text-shadow: 2px 2px 0 var(--footer-shadow-clr);
+  }
 }

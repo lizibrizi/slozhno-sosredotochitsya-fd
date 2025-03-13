@@ -1,5 +1,22 @@
-.page.theme_light {
+.theme-light {
+  --cover-image: url(../images/cover-image-light.png);
+  --accent-clr: #ff8dcb;
+  --accent-clr-with-background: #353430;
+  --accent-heading-clr: #ffc2e6;
+  --text-clr: #353430;
+  --button-hover-clr: #32312d66;
+  --decorative-bracket-clr: #353430;
+  --menu-clr: #353430;
+  --rec-decoration-clr: transparent;
+  --heading-clr: #353430;
+  --background-clr: #fff1f7;
+  --footer-shadow-clr: #ff0070;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-auto {
     --cover-image: url(../images/cover-image-light.png);
+    --background-clr: #fff1f7;
     --accent-clr: #ff8dcb;
     --accent-clr-with-background: #353430;
     --accent-heading-clr: #ffc2e6;
@@ -9,24 +26,6 @@
     --menu-clr: #353430;
     --rec-decoration-clr: transparent;
     --heading-clr: #353430;
-    --background-clr:  #FFF1F7;
-
+    --footer-shadow-clr: #ff0070;
   }
-  
-  @media (prefers-color-scheme: light) {
-  
-    :root {
-      --cover-image: url(../images/cover-image-light.png);
-      --background-clr:  #FFF1F7;
-      --accent-clr: #ff8dcb;
-      --accent-clr-with-background: #353430;
-      --accent-heading-clr: #ffc2e6;
-      --text-clr: #353430;
-      --button-hover-clr: #32312d66;
-      --decorative-bracket-clr: #353430;
-      --menu-clr: #353430;
-      --rec-decoration-clr: transparent;
-      --heading-clr:#353430;
-    }
-  }
-  
+}
