@@ -269,6 +269,9 @@
     min-width: 236px;
     width: 236px;
   }
+  .section_list-item:not(:first-child) {
+    margin: 10px 0 10px;
+  }
 }
 
 @media (min-width: 1024px) {
