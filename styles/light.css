@@ -10,7 +10,6 @@
   --rec-decoration-clr: transparent;
   --heading-clr: #353430;
   --background-clr: #fff1f7;
-  --footer-shadow-clr: #ff0070;
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,6 +25,5 @@
     --menu-clr: #353430;
     --rec-decoration-clr: transparent;
     --heading-clr: #353430;
-    --footer-shadow-clr: #ff0070;
   }
 }

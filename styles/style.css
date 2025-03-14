@@ -45,7 +45,7 @@
   top: 10px;
 }
 
-@media (min-width: 768px)  {
+@media (min-width: 768px) {
   .decorated-zone::before {
     top: 20px;
   }
@@ -59,10 +59,10 @@
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 0;
-  bottom: 20px;
+  bottom: 10px;
 }
 
-@media (min-width: 768px)  {
+@media (min-width: 768px) {
   .header__theme-menu {
     margin-top: 20px;
   }
@@ -184,9 +184,9 @@
 }
 
 .list_item_title {
-  margin: 0 0 10px;
   color: var(--heading-clr);
   font-size: 18px;
+  margin: 0 0 10px;
 }
 
 .list_item_title.subtitle {
@@ -235,34 +235,17 @@
   .section_list-item:not(:last-child) {
     margin-bottom: 20px;
   }
-}
-
-.section_title {
-  font-size: 18px;
-}
-
-@media (min-width: 1024px) {
-  .section_title {
-    min-width: 315px;
-    width: 315px;
-  }
-}
-
-@media (min-width: 768px) {
-  .section.horizontal {
-    display: flex;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 767px) {
   .section_title {
     margin-bottom: 20px;
   }
 }
 
+.section_title {
+  color: var(--heading-clr);
+  font-size: 18px;
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .section {
     margin: 80px 0 0;
   }
@@ -274,12 +257,33 @@
   .section:not(.horizontal) .section_list {
     margin-top: 20px;
     display: grid;
+    column-gap: var(--gap);
+  }
+
+  .section.horizontal {
+    display: flex;
+    gap: 20px;
+  }
+
+  .section_title {
+    min-width: 236px;
+    width: 236px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section_title {
+    min-width: 315px;
+    width: 315px;
+  }
+
+  .section:not(.horizontal) .section_list {
+    margin-top: 20px;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--gap);
   }
-  
 }
-
 
 .gallery {
   margin: 50px 0 40px;
@@ -292,8 +296,10 @@
   margin: 10px 0 0;
 }
 
-.gallery__list-item {
-  display: contents;
+@media (max-width: 767px) {
+  .gallery__list-item {
+    display: contents;
+  }
 }
 
 .gallery__img {
@@ -340,7 +346,6 @@
 .footer {
   display: grid;
   block-size: 100vh;
-  margin-block-start: 40px;
 }
 
 .footer__text {
@@ -348,10 +353,4 @@
   align-self: center;
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
-}
-
-@media (min-width: 1024px) {
-  .footer__text {
-    text-shadow: 2px 2px 0 var(--footer-shadow-clr);
-  }
 }
