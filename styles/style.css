@@ -236,7 +236,7 @@
     margin-bottom: 20px;
   }
 }
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
   .section_title {
     margin-bottom: 20px;
   }
@@ -298,10 +298,8 @@
   margin: 10px 0 0;
 }
 
-@media (max-width: 767px) {
-  .gallery__list-item {
-    display: contents;
-  }
+.gallery__list-item {
+  display: block;
 }
 
 .gallery__img {
