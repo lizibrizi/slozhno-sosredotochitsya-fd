@@ -298,12 +298,9 @@
   margin: 10px 0 0;
 }
 
-.gallery__list-item {
-  display: block;
-}
-
 .gallery__img {
   inline-size: 100%;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -335,7 +332,6 @@
   .gallery__list-item:last-child {
     grid-column: 2 / 4;
   }
-
   .gallery__img {
     object-fit: cover;
     object-position: top;
