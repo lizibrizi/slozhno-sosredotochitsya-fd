@@ -1,4 +1,4 @@
-.theme-dark {
+:root.theme-dark {
   --accent-clr: #ff0070;
   --accent-clr-with-background: #000028;
   --accent-heading-clr: #db00ff;
@@ -14,7 +14,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme-auto {
+  :root {
     --accent-clr: #ff0070;
     --accent-clr-with-background: #000028;
     --accent-heading-clr: #db00ff;
