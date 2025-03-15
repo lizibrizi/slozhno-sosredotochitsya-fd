@@ -227,7 +227,7 @@
   border-bottom: 1px solid var(--text-clr);
 }
 
-.accented-link:focus {
+.accented-link:focus-visible  {
   outline: 1px solid var(--text-clr);
 }
 
